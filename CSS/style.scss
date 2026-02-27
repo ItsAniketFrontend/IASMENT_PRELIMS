@@ -299,3 +299,112 @@ body{
     font-size: 16px;
   }
 }
+
+/* ================================
+   Sticky Bottom CTA (Mobile)
+================================ */
+.sticky-cta{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  padding: 10px 0 calc(10px + env(safe-area-inset-bottom));
+  background: rgba(255, 252, 232, 0.78); /* cream blur */
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0,0,0,0.06);
+
+  /* entry animation */
+  animation: stickySlideUp 600ms ease-out both;
+}
+
+@keyframes stickySlideUp{
+  from{ transform: translateY(110%); opacity: 0; }
+  to{ transform: translateY(0%); opacity: 1; }
+}
+
+.sticky-cta-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 10px 12px;
+  box-shadow: 0 16px 30px rgba(16,18,20,0.12);
+}
+
+.sticky-cta-text{
+  min-width: 0;
+}
+.sticky-cta-kicker{
+  font-size: 11px;
+  font-weight: 800;
+  color: #6B7280;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.sticky-cta-title{
+  font-size: 14px;
+  font-weight: 900;
+  color: #101214;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Button */
+.sticky-cta-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  text-decoration: none;
+
+  background: #FF6B6B;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 14px;
+
+  border: 0;
+  box-shadow: 0 14px 30px rgba(255, 107, 107, 0.28);
+  transform: translateZ(0);
+
+  /* subtle pulse */
+  animation: ctaPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes ctaPulse{
+  0%, 100%{ transform: scale(1); }
+  50%{ transform: scale(1.03); }
+}
+
+.sticky-cta-btn:active{
+  transform: scale(0.98);
+}
+
+.cta-arrow{
+  display: inline-block;
+  font-weight: 900;
+  animation: arrowNudge 900ms ease-in-out infinite;
+}
+
+@keyframes arrowNudge{
+  0%,100%{ transform: translateX(0); }
+  50%{ transform: translateX(4px); }
+}
+
+/* IMPORTANT: add bottom space so content doesn't hide behind sticky bar */
+body{
+  padding-bottom: 84px;
+}
+
+@media (max-width: 360px){
+  .sticky-cta-title{ font-size: 13px; }
+  .sticky-cta-btn{ padding: 11px 12px; font-size: 13px; }
+}
