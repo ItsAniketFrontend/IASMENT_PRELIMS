@@ -1,0 +1,328 @@
+/* GLOBAL */
+body {
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #101214;
+}
+
+.page-bg {
+  background: #FFFCE8; /* cream */
+}
+
+/* BRAND */
+.brand-logo {
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  font-size: 20px;
+  line-height: 1;
+  color: #101214;
+}
+
+.brand-logo span {
+  color: #FF6B6B; /* accent red */
+}
+
+.brand-sub {
+  font-size: 12px;
+  color: #6B7280;
+  margin-top: 2px;
+}
+
+/* TOP CTA */
+.top-cta-btn {
+  background: #FF6B6B;
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 12px;
+  border: 0;
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.18);
+}
+
+.top-cta-btn:hover {
+  background: #ff5a5a;
+  color: #fff;
+}
+
+/* CARDS */
+.soft-card {
+  border: 0;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(16, 18, 20, 0.06);
+}
+
+/* HERO TEXT */
+.mini-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1F2937;
+  background: #F2F6FB;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.mini-tag.light {
+  background: #FFF3F3;
+  color: #7A1E1E;
+}
+
+.hero-title {
+  font-weight: 900;
+  letter-spacing: -0.8px;
+  font-size: clamp(24px, 3.2vw, 36px);
+  line-height: 1.05;
+  color: #101214;
+}
+
+.hero-title .hero-year {
+  color: #FF6B6B;
+}
+
+.hero-para {
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* PILLS */
+.pill {
+  display: inline-block;
+  background: #F1FAFF; /* light blue */
+  border: 1px solid #D7F2FF;
+  color: #0F3B57;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 10px;
+  border-radius: 999px;
+}
+
+/* PRICE BOX */
+.price-box {
+  background: #101214;
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* BUTTONS */
+.btn-primary-solid {
+  background: #FF6B6B;
+  border: 0;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.btn-primary-solid:hover {
+  background: #ff5a5a;
+}
+
+.btn-outline-soft {
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #111827;
+  background: #fff;
+}
+
+.btn-outline-soft:hover {
+  background: #F9FAFB;
+}
+
+/* VIDEO CARD */
+.video-card {
+  background: #0E0F12;
+  padding: 10px;
+  border-radius: 18px;
+}
+
+.video-title {
+  font-weight: 900;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.video-title span {
+  color: #FF6B6B;
+}
+
+/* HIGHLIGHTS */
+.highlight-card {
+  background: #D6F1FF; /* close to screenshot */
+  border-radius: 16px;
+  border: 1px solid #C7ECFF;
+}
+
+.highlight-title {
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  color: #0C2D40;
+  margin-bottom: 8px;
+}
+
+.highlight-list {
+  padding-left: 18px;
+  margin: 0;
+  color: #0C2D40;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* SECTIONS */
+.section-card {
+  border-radius: 18px;
+  padding: 18px;
+  border: 0;
+}
+
+.section-head {
+  margin-bottom: 10px;
+}
+
+.section-kicker {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  color: #6B7280;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin: 4px 0 6px;
+  font-size: 20px;
+  color: #101214;
+}
+
+.section-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* COLOR VARIANTS */
+.pink-card {
+  background: #FFF3F3;
+  border: 1px solid #FFE1E1;
+}
+
+.blue-card {
+  background: #D6F1FF;
+  border: 1px solid #C7ECFF;
+}
+
+.white-card {
+  background: #ffffff;
+  border: 1px solid #EEF2F7;
+  box-shadow: 0 12px 28px rgba(16, 18, 20, 0.06);
+}
+
+/* MINI FEATURES */
+.mini-feature {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: 14px;
+  height: 100%;
+}
+
+.mini-feature.whiteish {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.mini-feature h6 {
+  font-weight: 900;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #101214;
+}
+
+.mini-feature p {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* CENTER CHIP */
+.center-chip {
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* OUTCOMES LIST */
+.outcome-list {
+  margin: 0;
+  padding-left: 18px;
+  color: #0C2D40;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* FAQ ACCORDION */
+.soft-accordion .accordion-item {
+  border: 1px solid #EEF2F7;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.soft-accordion .accordion-button {
+  font-weight: 800;
+  font-size: 13px;
+  color: #111827;
+  background: #F8FAFC;
+}
+
+.soft-accordion .accordion-button:focus {
+  box-shadow: none;
+}
+
+.soft-accordion .accordion-body {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.7;
+  background: #ffffff;
+}
+
+/* NOTES */
+.notes-card {
+  background: #1F1F1F;
+  border-radius: 18px;
+  color: #EDEDED;
+}
+
+.notes-title {
+  font-weight: 900;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.notes-list {
+  margin: 0;
+  padding-left: 18px;
+  color: #D6D6D6;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* SMALL DEVICES TWEAKS */
+@media (max-width: 575.98px) {
+  .price-box {
+    font-size: 13px;
+  }
+  .video-title {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=style.css.map */
