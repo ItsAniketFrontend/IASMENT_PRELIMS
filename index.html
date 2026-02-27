@@ -75,7 +75,7 @@
                         </div>
 
                         <div class="d-flex flex-wrap gap-2">
-                            <a href="#" class="btn btn-primary-solid px-4 py-2">Enroll Now</a>
+                            <a data-bs-toggle="modal" data-bs-target="#enrollModal" class="btn btn-primary-solid px-4 py-2">Enroll Now</a>
                             <a href="#faq" class="btn btn-outline-soft px-4 py-2">View FAQs</a>
                         </div>
                     </div>
@@ -521,7 +521,7 @@
                     <div class="sticky-cta-title">Enroll Now @ ₹1499</div>
                 </div>
 
-                <a href="#" class="sticky-cta-btn">
+                <a class="sticky-cta-btn" data-bs-toggle="modal" data-bs-target="#enrollModal">
                     Enroll Now
                     <span class="cta-arrow">→</span>
                 </a>
@@ -529,6 +529,67 @@
         </div>
     </div>
 
+
+    <!-- Enroll Popup Modal -->
+    <div class="modal fade enroll-modal" id="enrollModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content enroll-modal-content">
+                <div class="enroll-modal-head">
+                    <div>
+                        <div class="enroll-mini">ENROLL NOW</div>
+                        <h3 class="enroll-title">PRELIMS TRAINING LAB <span class="hero-year">Program 2026</span></h3>
+                        <!-- <p class="enroll-sub">3 Sessions MCQ Masterclass · Limited Seats · Free</p> -->
+                    </div>
+
+                    <button type="button" class="btn enroll-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+                </div>
+
+                <form class="enroll-form" onsubmit="event.preventDefault();">
+                    <div class="mb-3">
+                        <input type="text" class="form-control enroll-input" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="tel" class="form-control enroll-input" placeholder="Mobile Number" required>
+                    </div>
+
+                    <div class="mb-3 d-flex gap-2">
+                        <input type="text" class="form-control enroll-input" placeholder="Enter OTP">
+                        <button class="btn otp-btn" type="button">Send OTP</button>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="email" class="form-control enroll-input" placeholder="Email Address" required>
+                    </div>
+
+                    <button type="submit" class="btn enroll-submit w-100">
+                        Get Enrollment Link
+                    </button>
+
+                    <div class="enroll-footnote">
+                        No spam. Access details sent instantly.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // open once per session
+            if (!sessionStorage.getItem("enrollPopupShown")) {
+                setTimeout(() => {
+                    const modalEl = document.getElementById("enrollModal");
+                    if (modalEl) {
+                        const m = new bootstrap.Modal(modalEl);
+                        m.show();
+                        sessionStorage.setItem("enrollPopupShown", "1");
+                    }
+                }, 5000);
+            }
+        });
+    </script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
